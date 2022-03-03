@@ -29,7 +29,7 @@ div.rightalign {
   
 /* Add some content at the bottom of the video/page */
 .content {
-    text-align: left;
+    text-align: center;
     position: fixed;
     top: 0;
     color: #f1f1f1;

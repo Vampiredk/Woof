@@ -33,40 +33,38 @@
       <br>
       <br>
       <br>
-      <div v-if="showButton" class="buttonContent">
-        <h2 id="demo"></h2>
-        <h1 style="color:#FFFFFF">
-          {{ question }}
-        </h1>
-        <button v-if="showbtn1" class="button" @click="addAnswer(1)" >{{ btn1 }}</button>
-        <button v-if="showbtn2" class="button" @click="addAnswer(2)">{{ btn2 }}</button>
-        <div v-if="showFindDogbtn">
-          <ul v-if="findDog() === 'charles'">
-            <router-link to="/dogs/Charles">
-              <button class="button" >Find Hund</button>
-            </router-link>
-          </ul>
-          <ul v-if="findDog() === 'bandit'">
-            <router-link to="/dogs/Bandit">
-              <button class="button" >Find Hund</button>
-            </router-link>
-          </ul>
-          <ul v-if="findDog() === 'frida'">
-            <router-link to="/dogs/Frida">
-              <button class="button" >Find Hund</button>
-            </router-link>
-          </ul>
-          <ul v-if="findDog() === 'kalle'">
-            <router-link to="/dogs/Kalle">
-              <button class="button" >Find Hund</button>
-            </router-link>
-          </ul>
-          <ul v-if="findDog() === 'tessa'">
-            <router-link to="/dogs/Tessa">
-              <button class="button" >Find Hund</button>
-            </router-link>
-          </ul>
-        </div>
+      <h2 id="demo"></h2>
+      <h1 style="color:#FFFFFF">
+        {{ question }}
+      </h1>
+      <button v-if="showbtn1" class="button" @click="addAnswer(1)">{{ btn1 }}</button>
+      <button v-if="showbtn2" class="button" @click="addAnswer(2)">{{ btn2 }}</button>
+      <div v-if="showFindDogbtn">
+        <ul v-if="findDog() === 'charles'">
+          <router-link to="/dogs/Charles">
+            <button class="button" >Find Hund</button>
+          </router-link>
+        </ul>
+        <ul v-if="findDog() === 'bandit'">
+          <router-link to="/dogs/Bandit">
+            <button class="button" >Find Hund</button>
+          </router-link>
+        </ul>
+        <ul v-if="findDog() === 'frida'">
+          <router-link to="/dogs/Frida">
+            <button class="button" >Find Hund</button>
+          </router-link>
+        </ul>
+        <ul v-if="findDog() === 'kalle'">
+          <router-link to="/dogs/Kalle">
+            <button class="button" >Find Hund</button>
+          </router-link>
+        </ul>
+        <ul v-if="findDog() === 'tessa'">
+          <router-link to="/dogs/Tessa">
+            <button class="button" >Find Hund</button>
+          </router-link>
+        </ul>
       </div>
     </div>
   </body>x
@@ -95,7 +93,7 @@ export default {
       setTimeout(() => {
         this.showButton = true
         this.Pause_play_video()
-      }, 2000)
+      }, 5000)
     },
     addAnswer (value) {
       this.buttonAnswer.push(value)
@@ -196,15 +194,15 @@ export default {
                 console.log('2.1.1.2')
                 return 'bandit'
               }
-            } else if (this.buttonAnswer.at(2) === 2) {
-              if (this.buttonAnswer.length > 3) {
-                if (this.buttonAnswer.at(3) === 1) {
-                  console.log('2.1.2.1')
-                  return 'bandit'
-                } else if (this.buttonAnswer.at(3) === 2) {
-                  console.log('2.1.2.2')
-                  return 'charles'
-                }
+            }
+          } else if (this.buttonAnswer.at(2) === 2) {
+            if (this.buttonAnswer.length > 3) {
+              if (this.buttonAnswer.at(3) === 1) {
+                console.log('2.1.2.1')
+                return 'bandit'
+              } else if (this.buttonAnswer.at(3) === 2) {
+                console.log('2.1.2.2')
+                return 'charles'
               }
             }
           }

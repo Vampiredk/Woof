@@ -12,7 +12,7 @@
         <h1 style="color:#FFFFFF">
           Vil i lære hinanden bedre at kende i klassen?
         </h1>
-      <router-link to="/IndeUde">
+      <router-link to="/KlassensHund">
         <button class="button" @click="clearAnswer" >Find Klassens Hund</button>
       </router-link>
       </div>
