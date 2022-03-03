@@ -11,9 +11,6 @@
 
 <script>
 export default {
-  components: {
-    Sidebar
-  },
   data: function () {
     return {
       Emails: [],
