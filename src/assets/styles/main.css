@@ -2,27 +2,22 @@ div.a {
     text-align: center;
 }
 
-.h1 {
-    -webkit-text-stroke: 1px black;
-    font-family: arial; color: green;
+div.rightalign {
+    text-align: right;
 }
 
 .button {
     background-color: #4CAF50;
-    border: 1px solid black;
-    border-radius: 12px;
+    border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 20px;
+    margin: 4px 2px;
     cursor: pointer;
-    -webkit-text-stroke: 0.2px black;
-    font-family: arial; color: white;
 }
-
 
 #myVideo {
     position: fixed;
@@ -44,4 +39,19 @@ div.a {
 
 .buttonContent {
     text-align: center;
+}
+  
+  /* Style the button used to pause/play the video */
+#myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #f1f1f1;
+    color: #fff;
+    cursor: pointer;
+}
+#myBtn:hover {
+    background: #ddd;
+    color: black;
 }

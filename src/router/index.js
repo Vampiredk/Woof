@@ -9,7 +9,7 @@ import Tessa from '../views/dogs/Tessa.vue'
 
 const routes = [
   {
-    path: ' ',
+    path: '/',
     name: 'Home',
     component: Home
   },
