@@ -4,14 +4,9 @@
      <title> Vue 3 Basics</title>
   </head>
   <body>
-    <div id="app">
-      <img alt="Woof Logo" src="../assets/Images/Woof_logo.png">
-      <br>
-      {{ buttonAnswer }}
-        <video v-if="video1" autoplay muted loop id="myVideo">
-          <source src="../assets/video/video3.mp4" type="video/mp4">
-        </video>
-    </div>
+    <video v-if="video1" autoplay muted loop id="myVideo">
+      <source src="../assets/video/video3.mp4" type="video/mp4">
+    </video>
     <div class="content">
       <br>
       <br>
@@ -34,37 +29,39 @@
       <br>
       <br>
       <h2 id="demo"></h2>
-      <h1 style="color:#FFFFFF">
-        {{ question }}
-      </h1>
-      <button v-if="showbtn1" class="button" @click="addAnswer(1)">{{ btn1 }}</button>
-      <button v-if="showbtn2" class="button" @click="addAnswer(2)">{{ btn2 }}</button>
-      <div v-if="showFindDogbtn">
-        <ul v-if="findDog() === 'charles'">
-          <router-link to="/dogs/Charles">
-            <button class="button" >Find Hund</button>
-          </router-link>
-        </ul>
-        <ul v-if="findDog() === 'bandit'">
-          <router-link to="/dogs/Bandit">
-            <button class="button" >Find Hund</button>
-          </router-link>
-        </ul>
-        <ul v-if="findDog() === 'frida'">
-          <router-link to="/dogs/Frida">
-            <button class="button" >Find Hund</button>
-          </router-link>
-        </ul>
-        <ul v-if="findDog() === 'kalle'">
-          <router-link to="/dogs/Kalle">
-            <button class="button" >Find Hund</button>
-          </router-link>
-        </ul>
-        <ul v-if="findDog() === 'tessa'">
-          <router-link to="/dogs/Tessa">
-            <button class="button" >Find Hund</button>
-          </router-link>
-        </ul>
+      <div v-if=showButton>
+        <h1 class="h1" style="color:#FFFFFF">
+          {{ question }}
+        </h1>
+        <button v-if="showbtn1" class="button" @click="addAnswer(1)">{{ btn1 }}</button>
+        <button v-if="showbtn2" class="button" @click="addAnswer(2)">{{ btn2 }}</button>
+        <div v-if="showFindDogbtn">
+          <ul v-if="findDog() === 'charles'">
+            <router-link to="/dogs/Charles">
+              <button class="button" >Find Hund</button>
+            </router-link>
+          </ul>
+          <ul v-if="findDog() === 'bandit'">
+            <router-link to="/dogs/Bandit">
+              <button class="button" >Find Hund</button>
+            </router-link>
+          </ul>
+          <ul v-if="findDog() === 'frida'">
+            <router-link to="/dogs/Frida">
+              <button class="button" >Find Hund</button>
+            </router-link>
+          </ul>
+          <ul v-if="findDog() === 'kalle'">
+            <router-link to="/dogs/Kalle">
+              <button class="button" >Find Hund</button>
+            </router-link>
+          </ul>
+          <ul v-if="findDog() === 'tessa'">
+            <router-link to="/dogs/Tessa">
+              <button class="button" >Find Hund</button>
+            </router-link>
+          </ul>
+        </div>
       </div>
     </div>
   </body>x
@@ -133,6 +130,7 @@ export default {
         console.log('nothing changed')
       }
     },
+    /* If statement to figure out which button is shown, so you get to the right page */
     findDog () {
       if (this.buttonAnswer.at(0) === 1) {
         console.log('1')
