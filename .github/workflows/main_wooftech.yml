@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'WoofTech'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CDB5E31A56D542FD8EFBCE36577581A0 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C70FE117DB0C4516B939E0C0ECB83932 }}
           package: .
