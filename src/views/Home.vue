@@ -12,7 +12,11 @@
         <h1 style="color:#FFFFFF">
           Vil i lære hinanden bedre at kende i klassen?
         </h1>
+<<<<<<< HEAD
       <router-link to="/KlassensHund">
+=======
+      <router-link to="/Klasse">
+>>>>>>> parent of e0dc890 (Cleaning Code)
         <button class="button" @click="clearAnswer" >Find Klassens Hund</button>
       </router-link>
       </div>
